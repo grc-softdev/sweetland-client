@@ -70,7 +70,7 @@ export default function Home() {
       type="submit">Acessar</button>
       </form>
       <Link href="/signup" className={styles.text}>
-      Não possui uma conta? Cadastre-se
+      Não possui uma conta? Cadastre-se Agora
       </Link>
 
     </section>
