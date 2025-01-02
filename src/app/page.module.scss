@@ -30,7 +30,11 @@
     gap: 16px;
   }
 
-  form button{
+  
+}
+
+.formButton {
+  
     height: 40px;
     font-size: 16px;
     background-color: var(--red-900);
@@ -38,10 +42,10 @@
     align-items: center;
     justify-content: center;
     transition: all 0.5s;
-  }
+ 
 }
 
-form button:hover{
+.formButton:hover{
   transform: scale(1.05)
 }
 

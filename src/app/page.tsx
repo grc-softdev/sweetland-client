@@ -66,7 +66,7 @@ export default function Home() {
         className={styles.input}
         />
 
-      <button className={styles.button} id="button"
+        <button className={styles.formButton} id="button"
       type="submit">Acessar</button>
       </form>
       <Link href="/signup" className={styles.text}>
