@@ -49,7 +49,7 @@ export const OrderProvider = ({children}: OrderProviderProps) => {
     const router = useRouter()
 
     const onRequestOpen = async (order_id: string) => {
-x``        
+       
         const response = await api.get("/orders/detail", {
             headers: {
                 Authorization: `Bearer ${token}`
