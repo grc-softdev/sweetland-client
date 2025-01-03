@@ -4,8 +4,10 @@ import Link from "next/link";
 import { api } from '@/services/api'
 import logo from "../../../public/logo.svg";
 import styles from "../page.module.scss";
+import { toast } from "sonner";
 
 const SignUp = () => {
+
     const handleRegister = async (formData: FormData) => {
         "use server"
         const name = formData.get("name")
@@ -13,18 +15,22 @@ const SignUp = () => {
         const password = formData.get("password")
 
         if(name === "" || email === "" || password === ""){
-            console.log("preencha todos os campos")
+          toast.warning("Preencha todos os campos")
             return
         }
 
          try {
             await api.post("/users", {
-                name, email, password
+              name, email, password
             })
          } catch(err) {
-            console.log("error")
+          //TODO: link the error we get from the backend to something user friendly          
             console.log(err)
+
+            
          }
+         toast.success('cadastrado com sucesso')
+         
     }
 
   return (
@@ -57,7 +63,7 @@ const SignUp = () => {
             className={styles.input}
           />
 
-          <button className={styles.button} type="submit">
+          <button className={styles.formButton} type="submit">
             Cadastrar
           </button>
         </form>
