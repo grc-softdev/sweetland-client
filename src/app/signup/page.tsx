@@ -7,7 +7,6 @@ import { toast } from 'sonner';
 import { handleRegister } from "@/actions/authActions";
 
 const SignUp = () => {
-
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
