@@ -1,44 +1,35 @@
-
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import { api } from '@/services/api'
 import logo from "../../../public/logo.svg";
 import styles from "../page.module.scss";
-import { toast } from "sonner";
+import { toast } from 'sonner';
+import { handleRegister } from "@/actions/authActions";
 
 const SignUp = () => {
 
-    const handleRegister = async (formData: FormData) => {
-        "use server"
-        const name = formData.get("name")
-        const email = formData.get("email")
-        const password = formData.get("password")
 
-        if(name === "" || email === "" || password === ""){
-          toast.warning("Preencha todos os campos")
-            return
-        }
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
 
-         try {
-            await api.post("/users", {
-              name, email, password
-            })
-         } catch(err) {
-          //TODO: link the error we get from the backend to something user friendly          
-            console.log(err)
+    const result = await handleRegister(formData);
 
-            
-         }
-         toast.success('cadastrado com sucesso')
-         
+    if (result.success) {
+      toast.success(result.message);
+    } else {
+      toast.error(result.message);
     }
+  };
+
 
   return (
     <div className={styles.containerCenter}>
       <Image src={logo} alt="logo da pizzaria" />
       <section className={styles.login}>
         <h1>Criando sua Conta</h1>
-        <form action={handleRegister}>
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             required
