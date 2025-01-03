@@ -1,14 +1,12 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import { api } from '@/services/api'
 import logo from "../../../public/logo.svg";
 import styles from "../page.module.scss";
 import { toast } from 'sonner';
 import { handleRegister } from "@/actions/authActions";
 
 const SignUp = () => {
-
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
