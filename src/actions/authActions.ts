@@ -12,6 +12,7 @@ export const handleRegister = async (formData: FormData) => {
   }
 
   try {
+    console.warn({api})
     await api.post("/users", {
       name,
       email,
