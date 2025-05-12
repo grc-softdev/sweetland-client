@@ -5,8 +5,10 @@ import logo from "../../../public/logo.png";
 import styles from "../page.module.scss";
 import { toast } from 'sonner';
 import { handleRegister } from "@/actions/authActions";
+import { useRouter } from "next/navigation";
 
 const SignUp = () => {
+  const router = useRouter();
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -15,6 +17,7 @@ const SignUp = () => {
 
     if (result.success) {
       toast.success(result.message);
+      router.push("/");
     } else {
       toast.error(result.message);
     }
@@ -31,7 +34,7 @@ const SignUp = () => {
             type="text"
             required
             name="name"
-            placeholder="Enter your name"
+            placeholder="enter your name"
             className={styles.input}
           />
 
@@ -39,7 +42,7 @@ const SignUp = () => {
             type="email"
             required
             name="email"
-            placeholder="Enter your email"
+            placeholder="enter your email"
             className={styles.input}
           />
 
