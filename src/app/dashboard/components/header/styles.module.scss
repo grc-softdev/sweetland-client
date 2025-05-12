@@ -18,7 +18,7 @@
     }
 
     a{
-        color: var(--white);
+        color: var(--brown-700);
         text-decoration: none;
         transition: color .8s;
 
@@ -28,13 +28,14 @@
     }
 
     button{
+        color: var(--brown-700);
         border: 0;
         background: transparent;
         margin-left: 16px;
         transition: transform 0.8s;
 
         &:hover{
-            transform: scale(1.2);
+            color: var(--red-900);
         }
     }
 }

@@ -8,11 +8,15 @@
 :root{
     --white: #FFF;
     --black: #000;
-    --dark-900: #101026;
-    --dark-700: #1d1d2e;
     --gray-100: #8a8a8a;
-    --green-900: #3fffa3;
-    --red-900: #FF3f4b;
+    --red-900: #a01580;
+    --pink-200: #F7E9EC;
+    --pink-500: #ffb7c1;
+    --blue-200: #a4ecff;
+    --blue-600: #03a3d8;
+    --brown-700: #4e2806;
+    --blue-100: #E8F0FE;
+    --font-family-base: var(--font-urbanist);
 }
 
 button{
@@ -25,11 +29,23 @@ a{
 }
 
 body{
-    background: var(--dark-700);
+    font-family: var(--font-family-base), sans-serif;
+    background: var(--pink-200);
 }
 
 body, input, textarea, select, button{
     font: 400, 1rem;
+}
+
+input,
+textarea {
+  font-family: var(--font-urbanist), sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: var(--font-urbanist), sans-serif;
+  color: #aaa;
 }
 
 @media (max-width: 720px){

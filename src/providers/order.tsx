@@ -15,7 +15,7 @@ export type OrderItemProps = {
     product: {
         id: string;
         name: string | null;
-        price: string;
+        price: number;
         description: string;
         banner: string;
         category_id: string;
@@ -82,10 +82,10 @@ export const OrderProvider = ({children}: OrderProviderProps) => {
             })
         } catch(err) {
             console.log(err);
-            toast.error("Falha ao finalizar este pedido")
+            toast.error("Finish order failed.")
             return
         }
-        toast.success("Pedido realizado com sucesso!")
+        toast.success("Success!")
         router.refresh()
         setIsOpen(false)
     }

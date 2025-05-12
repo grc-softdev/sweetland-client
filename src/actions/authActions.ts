@@ -8,7 +8,7 @@ export const handleRegister = async (formData: FormData) => {
   const password = formData.get("password");
 
   if (!name || !email || !password) {
-    return { success: false, message: "Preencha todos os campos" };
+    return { success: false, message: "Fill all fields" };
   }
 
   try {
@@ -17,9 +17,9 @@ export const handleRegister = async (formData: FormData) => {
       email,
       password,
     });
-    return { success: true, message: "Cadastrado com sucesso" };
+    return { success: true, message: "Success" };
   } catch (err) {
     console.error(err);
-    return { success: false, message: "Erro ao cadastrar. Tente novamente." };
+    return { success: false, message: "Error. Try again" };
   }
 };

@@ -33,17 +33,17 @@ const Category = () => {
 
   return (
     <main className={styles.container}>
-      <h1>Nova Categoria</h1>
+      <h1>New Category</h1>
 
       <form className={styles.form} action={handleRegisterCategory}>
         <input
         type='text'
         name='name'
-        placeholder='Nome da categoria, ex.: Pizzas'
+        placeholder='category name, ex.: bakes'
         required
         className={styles.input}
         />
-       <Button name='Cadastrar'/>
+       <Button name='Register'/>
       </form>
     </main>
   )

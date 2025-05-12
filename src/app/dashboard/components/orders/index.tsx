@@ -23,22 +23,22 @@ const Orders = ({ orders }: Props) => {
 
   const handleRefresh = () => {
     router.refresh()
-    toast.success('Pedidos Atualizados com Sucesso!')
+    toast.success(' order successfully updated!')
   }
 
   return (
     <>
     <main className={styles.container}>
       <section className={styles.containerHeader}>
-        <h1>Últimos Pedidos</h1>
+        <h1 style={{color:'#4e2806'}}>Last Orders</h1>
         <button>
-          <RefreshCw size={24} color="#3fffa3" onClick={handleRefresh}/>
+          <RefreshCw size={24} color="#FF3f4b" onClick={handleRefresh}/>
         </button>
       </section>
       
       <section className={styles.listOrders}>
         {orders.length === 0  && (
-          <span className={styles.emptyItem}>Nenhum pedido aberto no momento...</span>
+          <span className={styles.emptyItem}>There is no request...</span>
         )}
         {orders.map((order) => (
           <button 
@@ -46,7 +46,7 @@ const Orders = ({ orders }: Props) => {
           className={styles.orderITem} 
           onClick={() => handleDetailOrder(order.id)}>
           <div className={styles.tag}></div>
-          <span>{order.table}</span>
+          <span>Order {order.table}</span>
           </button>
         ))}
       </section>

@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../public/logo.svg";
+import logo from "../../../public/logo.png";
 import styles from "../page.module.scss";
 import { toast } from 'sonner';
 import { handleRegister } from "@/actions/authActions";
@@ -23,15 +23,15 @@ const SignUp = () => {
 
   return (
     <div className={styles.containerCenter}>
-      <Image src={logo} alt="logo da pizzaria" />
+      <Image src={logo} width={200} alt="candy shop logo" />
       <section className={styles.login}>
-        <h1>Criando sua Conta</h1>
+        <h1>Create your Account</h1>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             required
             name="name"
-            placeholder="Digite Seu Nome"
+            placeholder="Enter your name"
             className={styles.input}
           />
 
@@ -39,7 +39,7 @@ const SignUp = () => {
             type="email"
             required
             name="email"
-            placeholder="Digite Seu Email"
+            placeholder="Enter your email"
             className={styles.input}
           />
 
@@ -52,11 +52,11 @@ const SignUp = () => {
           />
 
           <button className={styles.formButton} type="submit">
-            Cadastrar
+            Register
           </button>
         </form>
         <Link href="/" className={styles.text}>
-          Já possui uma conta? Faça o login
+        Already have an account?{" "} SignIn
         </Link>
       </section>
     </div>

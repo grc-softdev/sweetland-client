@@ -10,7 +10,7 @@ const Button = ({ name }: ButtonProps) => {
   const { pending } = useFormStatus()
 
   return (
-    <button type='submit' disabled={pending} className={styles.button}>{pending ? 'Carregando...': name}</button>
+    <button type='submit' disabled={pending} className={styles.button}>{pending ? 'Loading...': name}</button>
   )
 }
 

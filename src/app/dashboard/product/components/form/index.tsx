@@ -28,7 +28,7 @@ const Form = ({ categories}: Props) => {
         const description = formData.get('description')
 
         if(!name || !categoryIndex || !price || !description || !image) {
-            toast.warning("Preencha todos os campos")
+            toast.warning("Fill all fields")
             return
         }
 
@@ -51,7 +51,7 @@ const Form = ({ categories}: Props) => {
             console.log(err)
         })
 
-        toast.success('cadastrado com sucesso')
+        toast.success('successfully registered')
     }
 
 
@@ -60,7 +60,7 @@ const Form = ({ categories}: Props) => {
             const image = e.target.files[0]
 
             if(image.type !== "image/jpeg" && image.type !== "image/png" && image.type !== "image/jpg"){
-                toast.warning('Formato Proibido!')
+                toast.warning('forbidden format!')
                 return
             }
 
@@ -72,11 +72,11 @@ const Form = ({ categories}: Props) => {
 
   return (
     <main className={styles.container}>
-        <h1>Novo Produto</h1>
+        <h1>New Product</h1>
         <form className={styles.form} action={handleRegisterProduct}>
             <label className={styles.labelImage}>
                 <span>
-                    <UploadCloud size={38} color='#FFF' />
+                    <UploadCloud size={38} color=' #4e2806' />
                 </span>
                 <input
                 type='file'
@@ -86,7 +86,7 @@ const Form = ({ categories}: Props) => {
                 />
                 {previewImage && (
                     <Image 
-                    alt='imagem de preview' 
+                    alt='preview' 
                     src={previewImage} 
                     className={styles.preview}
                     fill={true}
@@ -106,24 +106,24 @@ const Form = ({ categories}: Props) => {
             <input 
             type='text' 
             name='name' 
-            placeholder='digite o nome do produto...'
+            placeholder='product name'
             required 
             className={styles.input}
             />
              <input 
             type='text' 
             name='price' 
-            placeholder='digite o preço do produto...'
+            placeholder=' product price'
             required 
             className={styles.input}
             />
             <textarea 
             className={styles.input}
-            placeholder='digite a descrição do produto...'
+            placeholder='describe product'
             required
             name='description'
             />
-            <Button name='Cadastrar Produto'/>
+            <Button name='Register Product'/>
         </form>
     </main>
   )
