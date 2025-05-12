@@ -37,9 +37,9 @@ export default function Home() {
         httpOnly: false,
         secure: process.env.NODE_ENV === "production",
       });
-    } catch (err) {
-      console.log(err);
-      return;
+    } catch (error) {
+      console.log("login error", error);
+      return { error: error.response?.data?.error || "authentication error" };
     }
     redirect("/dashboard");
   };
@@ -55,7 +55,8 @@ export default function Home() {
             type="email"
             required
             name="email"
-            placeholder="Enter your email"
+            placeholder="enter your email"
+            defaultValue="testadmin@email.com"
             className={styles.input}
           />
 
@@ -63,7 +64,8 @@ export default function Home() {
             type="password"
             required
             name="password"
-            placeholder="*********"
+            placeholder="enter your password"
+            defaultValue="123123"
             className={styles.input}
           />
 
