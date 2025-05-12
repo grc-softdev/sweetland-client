@@ -38,8 +38,11 @@ export default function Home() {
         secure: process.env.NODE_ENV === "production",
       });
     } catch (error) {
-      console.log("login error", error);
-      return { error: error.response?.data?.error || "authentication error" };
+      const serviceError = error as {
+        message: string
+      }
+      console.error( serviceError.message|| "authentication error");
+      return 
     }
     redirect("/dashboard");
   };
