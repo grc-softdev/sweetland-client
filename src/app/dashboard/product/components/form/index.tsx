@@ -80,6 +80,7 @@ const Form = ({ categories}: Props) => {
                 </span>
                 <input
                 type='file'
+                name='file'
                 accept='image/png, image/jpeg, image/jpg'
                 required
                 onChange={handleFile}
