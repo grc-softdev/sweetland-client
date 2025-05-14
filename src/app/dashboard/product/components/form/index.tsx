@@ -17,7 +17,7 @@ type Props = {
     categories: CategoryProps[]
 }
 
-const Form = ({ categories}: Props) => {
+const Form = ({ categories }: Props) => {
     const [image, setImage] = useState<File>()
     const [previewImage, setPreviewImage] = useState("")
 
@@ -27,7 +27,7 @@ const Form = ({ categories}: Props) => {
         const price = formData.get('price')
         const description = formData.get('description')
 
-        if(!name || !categoryIndex || !price || !description || !image) {
+        if (!name || !categoryIndex || !price || !description || !image) {
             toast.warning("Fill all fields")
             return
         }
@@ -46,88 +46,88 @@ const Form = ({ categories}: Props) => {
             headers: {
                 Authorization: `Bearer ${token}`
             }
-        })
-        .catch((err) => {
+        }).catch((err) => {
             console.log(err)
         })
 
         toast.success('successfully registered')
     }
 
-
     const handleFile = (e: ChangeEvent<HTMLInputElement>) => {
-        if(e.target.files && e.target.files[0]){
+        if (e.target.files && e.target.files[0]) {
             const image = e.target.files[0]
 
-            if(image.type !== "image/jpeg" && image.type !== "image/png" && image.type !== "image/jpg"){
+            if (
+                image.type !== "image/jpeg" &&
+                image.type !== "image/png" &&
+                image.type !== "image/jpg"
+            ) {
                 toast.warning('forbidden format!')
                 return
             }
 
-            setImage(image);
+            setImage(image)
             setPreviewImage(URL.createObjectURL(image))
         }
     }
 
-
-  return (
-    <main className={styles.container}>
-        <h1>New Product</h1>
-        <form className={styles.form} action={handleRegisterProduct}>
-            <label className={styles.labelImage}>
-                <span>
-                    <UploadCloud size={38} color=' #4e2806' />
-                </span>
-                <input
-                type='file'
-                name='file'
-                accept='image/png, image/jpeg, image/jpg'
-                required
-                onChange={handleFile}
-                />
-                {previewImage && (
-                    <Image 
-                    alt='preview' 
-                    src={previewImage} 
-                    className={styles.preview}
-                    fill={true}
-                    quality={100}
-                    priority={true}
+    return (
+        <main className={styles.container}>
+            <h1>New Product</h1>
+            <form className={styles.form} action={handleRegisterProduct}>
+                <label className={styles.labelImage}>
+                    <span>
+                        <UploadCloud size={38} color='#4e2806' />
+                    </span>
+                    <input
+                        type='file'
+                        name='file'
+                        accept='image/png, image/jpeg, image/jpg'
+                        onChange={handleFile}
                     />
-                )}
-            </label>
+                    {previewImage && (
+                        <Image
+                            alt='preview'
+                            src={previewImage}
+                            className={styles.preview}
+                            fill={true}
+                            quality={100}
+                            priority={true}
+                        />
+                    )}
+                </label>
 
-            <select name='category'>
-                {categories.map((category, index) => (
-                    <option key={category.id} value={index}>
-                        {category.name}
-                    </option>
-                ))}
-            </select>
-            <input 
-            type='text' 
-            name='name' 
-            placeholder='product name'
-            required 
-            className={styles.input}
-            />
-             <input 
-            type='text' 
-            name='price' 
-            placeholder=' product price'
-            required 
-            className={styles.input}
-            />
-            <textarea 
-            className={styles.input}
-            placeholder='describe product'
-            required
-            name='description'
-            />
-            <Button name='Register Product'/>
-        </form>
-    </main>
-  )
+                <select name='category'>
+                    {categories.map((category, index) => (
+                        <option key={category.id} value={index}>
+                            {category.name}
+                        </option>
+                    ))}
+                </select>
+                <input
+                    type='text'
+                    name='name'
+                    placeholder='product name'
+                    required
+                    className={styles.input}
+                />
+                <input
+                    type='text'
+                    name='price'
+                    placeholder='product price'
+                    required
+                    className={styles.input}
+                />
+                <textarea
+                    className={styles.input}
+                    placeholder='describe product'
+                    required
+                    name='description'
+                />
+                <Button name='Register Product' />
+            </form>
+        </main>
+    )
 }
 
 export default Form
