@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎂 Sweetland
 
-## Getting Started
+**Sweetland** is a full-stack application designed to manage product registration and order flow in a bakery shop. It allows an **admin** to log in, register product **categories** (like cakes, cupcakes, sandwiches, drinks, etc.), and create products with images.
 
-First, run the development server:
+The system also integrates with a **React Native mobile app**, enabling waiters and waitresses to view registered products and send customer orders directly to the **kitchen**. The backend is built with **Node.js, Express, Prisma, and PostgreSQL** for handling data and authentication.
+
+## 🌐 Tech Stack
+
+- **Frontend:** React, SASS/CSS, Axios, React Router, Context API
+- **Backend:** Node.js, Express, Prisma, PostgreSQL
+- **Mobile:** React Native (Expo)
+
+## ✨ Features
+
+- Secure admin login and authentication
+- Category and product management
+- Photo upload for each product
+- Product listing organized by category
+- Mobile app integration for real-time order flow
+- Kitchen receives customer selections instantly
+
+## 🔗 Live Demo
+
+👉 [Try Sweetland Live](https://sweetland-grcn-projects.vercel.app/)
+
+## 🧱 Architecture
+
+Sweetland is a modular full-stack application composed of three main parts:
+
+| Layer       | Description                                                                |
+|-------------|----------------------------------------------------------------------------|
+| 🌐 Frontend | Admin dashboard to manage categories and products                          |
+| 🔧 Backend  | Handles API requests, authentication, and database operations              |
+| 📱 Mobile   | React Native app used by waiters to select items and send them to kitchen  |
+
+### 📚 Related Repositories
+
+- 📦 [Backend (Node + Express + Prisma + PostgreSQL)](../backend/README.md)
+- 📱 [Mobile App (React Native)](../mobile/README.md)
+
+
+<h2 id="layout">🎨 Layout</h2>
+
+<p align="center">
+    <img src="../.github/example.png" alt="Login" width="400px">
+    <img src="../.github/example.png" alt="Category" width="400px">
+  <img src="../.github/example.png" alt="mobile" width="400px"> 
+</p>
+
+
+## 🚀 Getting Started
+
+### Clone the repository
 
 ```bash
+git clone https://github.com/your-username/confectionery-app.git
+cd confectionery-app/frontend
+Install dependencies
+bash
+
+npm install
+Start the development server
+bash
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+⚠️ Note: Ensure the backend server is running and accessible.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🧾 License
+This project is licensed under the MIT License.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
