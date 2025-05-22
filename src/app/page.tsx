@@ -22,6 +22,7 @@ export default function Home() {
         password,
       });
 
+      
       if (!response.data.token) {
         return;
       }
