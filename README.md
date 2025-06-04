@@ -44,7 +44,6 @@ Sweetland is a modular full-stack application composed of three main parts:
 <p align="center">
     <img src="public/sweetland.png" alt="Login" width="400px">
     <img src="public/category.png" alt="Category" width="400px">
-    
 </p>
 <p align="center">
     <img src="public/product.png" alt="Product" width="400px">
@@ -58,7 +57,7 @@ Sweetland is a modular full-stack application composed of three main parts:
 ### Clone the repository
 
 ```bash
-git clone [https://github.com/your-username/confectionery-app.git](https://github.com/grc-softdev/sweetland-client.git)
+git clone [sweetland-client](https://github.com/grc-softdev/sweetland-client.git)
 
 npm install
 Start the development server
