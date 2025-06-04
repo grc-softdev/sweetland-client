@@ -39,7 +39,7 @@ const ModalOrder = () => {
                   <img
                     src={`${item.product.banner}`}
                     width={50}
-                    height={50}
+                    height={50} 
                     alt={`image of ${item.product.name}`}
                     style={{ borderRadius: "4px" }}
                   />
