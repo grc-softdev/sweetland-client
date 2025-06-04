@@ -35,16 +35,16 @@ Sweetland is a modular full-stack application composed of three main parts:
 
 ### 📚 Related Repositories
 
-- 📦 [Backend (Node + Express + Prisma + PostgreSQL)][(https://github.com/grc-softdev/sweetland-server)]
-- 📱 [Mobile App (React Native)][(../mobile/README.md)][(https://github.com/grc-softdev/sweetland-mobile)]
+- 📦 [Backend (Node + Express + Prisma + PostgreSQL)](https://github.com/grc-softdev/sweetland-server/README.md)
+- 📱 [Mobile App (React Native)](https://github.com/grc-softdev/sweetland-mobile/README.md)
 
 
 <h2 id="layout">🎨 Layout</h2>
 
 <p align="center">
-    <img src="../.github/example.png" alt="Login" width="400px">
-    <img src="../.github/example.png" alt="Category" width="400px">
-  <img src="../.github/example.png" alt="mobile" width="400px"> 
+    <img src="../public/sweetland.png" alt="Login" width="400px">
+    <img src="../public/product.png" alt="Product" width="400px">
+  <img src="../public/orders.png" alt="Orders" width="400px"> 
 </p>
 
 
@@ -53,10 +53,7 @@ Sweetland is a modular full-stack application composed of three main parts:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/confectionery-app.git
-cd confectionery-app/frontend
-Install dependencies
-bash
+git clone [https://github.com/your-username/confectionery-app.git](https://github.com/grc-softdev/sweetland-client.git)
 
 npm install
 Start the development server
