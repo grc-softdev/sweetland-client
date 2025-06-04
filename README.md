@@ -35,8 +35,8 @@ Sweetland is a modular full-stack application composed of three main parts:
 
 ### 📚 Related Repositories
 
-- 📦 [Backend (Node + Express + Prisma + PostgreSQL)](../backend/README.md)
-- 📱 [Mobile App (React Native)](../mobile/README.md)
+- 📦 [Backend (Node + Express + Prisma + PostgreSQL)][(https://github.com/grc-softdev/sweetland-server)]
+- 📱 [Mobile App (React Native)][(../mobile/README.md)][(https://github.com/grc-softdev/sweetland-mobile)]
 
 
 <h2 id="layout">🎨 Layout</h2>
