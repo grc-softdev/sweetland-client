@@ -37,7 +37,7 @@ const ModalOrder = () => {
               <section className={styles.item} key={item.id}>
                 <div className={styles.itemd}>
                   <img
-                    src={`http://localhost:3333/files/${item.product.banner}`}
+                    src={${item.product.banner}}
                     width={50}
                     height={50}
                     alt={`image of ${item.product.name}`}
