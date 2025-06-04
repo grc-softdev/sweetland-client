@@ -43,6 +43,7 @@ Sweetland is a modular full-stack application composed of three main parts:
 
 <p align="center">
     <img src="public/sweetland.png" alt="Login" width="400px">
+    <img src="public/category.png" alt="Category" width="400px">
     <img src="public/product.png" alt="Product" width="400px">
     <img src="public/orders.png" alt="Orders" width="400px"> 
 </p>
