@@ -2,7 +2,7 @@
 
 **Sweetland** is a full-stack application designed to manage product registration and order flow in a bakery shop. It allows an **admin** to log in, register product **categories** (like cakes, cupcakes, sandwiches, drinks, etc.), and create products with images.
 
-The system also integrates with a **[React Native mobile](https://github.com/grc-softdev/sweetland-mobile)**, enabling waiters and waitresses to view registered products and send customer orders directly to the **kitchen**. The backend is built with **Node.js, Express, Prisma, and PostgreSQL** for handling data and authentication.
+The system also integrates with **[sweetland mobile](https://github.com/grc-softdev/sweetland-mobile)**, enabling waiters and waitresses to view registered products and send customer orders directly to the **kitchen**. The backend is built with **Node.js, Express, Prisma, and PostgreSQL** for handling data and authentication.
 
 ## 🌐 Tech Stack
 
